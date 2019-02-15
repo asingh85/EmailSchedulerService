@@ -1,7 +1,5 @@
 # Spring Boot Quartz Scheduler Example: Building an Email Scheduling app
 
-**Complete Tutorial:** https://www.callicoder.com/spring-boot-quartz-scheduler-email-scheduling-example/
-
 ## Requirements
 
 1. Java - 1.8.x
@@ -15,7 +13,7 @@
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial.git
+git clone https://github.com/asingh85/EmailSchedulerService
 ```
 
 **2. Create MySQL database**
@@ -36,8 +34,8 @@ The project is using Gmail's SMTP server for sending emails. Whether you use Gma
 ```properties
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
-spring.mail.username=rajeevc217@gmail.com
-spring.mail.password=
+spring.mail.username=<USERNAME>
+spring.mail.password=<PASSWORD>
 ```
 
 If you're using Gmail, you need to allow the third party apps to send emails by following the instructions below -
@@ -65,7 +63,7 @@ mvn spring-boot:run
 
 ```bash
 curl -i -H "Content-Type: application/json" -X POST \
--d '{"email":"callicoder@gmail.com","subject":"Things I wanna say to my Future self","body":"Dear Future me, <br><br> <b>Think Big And Don’t Listen To People Who Tell You It Can’t Be Done. Life’s Too Short To Think Small.</b> <br><br> Cheers, <br>Rajeev!","dateTime":"2018-09-04T16:15:00","timeZone":"Asia/Kolkata"}' \
+-d '{"email":"bitboffins@gmail.com","subject":"Things I wanna say to my Future self","body":"Dear Future me, <br><br> <b>Think Big And Don’t Listen To People Who Tell You It Can’t Be Done. Life’s Too Short To Think Small.</b> <br><br> Cheers, <br>Amandeep!","dateTime":"2019-02-15T16:15:00","timeZone":"Arab/Dubai"}' \
 http://localhost:8080/scheduleEmail
 
 # Output
